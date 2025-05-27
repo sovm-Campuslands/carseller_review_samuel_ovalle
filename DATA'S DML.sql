@@ -1,0 +1,254 @@
+use CARSELLER;
+-- CARGOS 
+INSERT INTO CARGO (NOMBRE) VALUES ('Vendedor');
+INSERT INTO CARGO (NOMBRE) VALUES ('Mecánico');
+INSERT INTO CARGO (NOMBRE) VALUES ('Administrador');
+INSERT INTO CARGO (NOMBRE) VALUES ('Asesor Comercial');
+INSERT INTO CARGO (NOMBRE) VALUES ('Gerente de Sucursal');
+INSERT INTO CARGO (NOMBRE) VALUES ('Auxiliar Contable');
+INSERT INTO CARGO (NOMBRE) VALUES ('Jefe de Taller');
+
+-- SUCURSALES
+
+INSERT INTO SUCURSAL (DIRECCION, TELEFONO) VALUES ('Cra 10 #20-30, Bogotá', '+57 6012345678');
+INSERT INTO SUCURSAL (DIRECCION, TELEFONO) VALUES ('Av. Bolívar #15-60, Medellín', '+57 6041234567');
+INSERT INTO SUCURSAL (DIRECCION, TELEFONO) VALUES ('Calle 100 #25-50, Cali', '+57 6021234567');
+
+-- AREAS
+
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Ventas - Bogotá', 1);
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Administración - Bogotá', 1);
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Servicio Técnico - Bogotá', 1);
+
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Ventas - Medellín', 2);
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Servicio al Cliente - Medellín', 2);
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Taller - Medellín', 2);
+
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Ventas - Cali', 3);
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Administración - Cali', 3);
+INSERT INTO AREA (NOMBRE, SUCURSAL_ID) VALUES ('Repuestos - Cali', 3);
+
+-- EMPLEADOS
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Carlos', 'Ramírez', 'CC', 10234567, 'Cra 1 #23-45, Bogotá', 'carlos.ramirez@gmail.com', '+57 3001234567', 2500000, TRUE, 1, 1, 1);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Laura', 'González', 'CC', 11234568, 'Calle 50 #14-88, Bogotá', 'laura.gonzalez@gmail.com', '+57 3002345678', 3200000, TRUE, 2, 1, 2);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Julián', 'Martínez', 'CC', 12234569, 'Av. Caracas #15-20, Bogotá', 'julian.martinez@gmail.com', '+57 3003456789', 1800000, TRUE, 3, 1, 3);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Sopla', 'Monda', 'CC', 10011234, 'Cra 10 #20-30, Bogotá', 'sopla.monda@gmail.com', '+57 3101122334', 2700000, TRUE, 1, 1, 1);
+
+INSERT INTO EMPLEADO(NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Pepe', 'Jamon', 'CC', 10022345, 'Calle 45 #30-25, Bogotá', 'pepe.jamon@gmail.com', '+57 3102233445', 2500000, TRUE, 2, 1, 2);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Mewging', 'Pinturesco', 'CC', 10033456, 'Av. Caracas #50-11, Bogotá', 'Mewging.Pinturesco@gmail.com', '+57 3103344556', 2900000, TRUE, 3, 1, 3);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Samuel', 'Valles', 'CC', 10044567, 'Cra 7 #15-50, Bogotá', 'Samuel.Valles@gmail.com', '+57 3104455667', 3100000, TRUE, 4, 1, 1);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Santiago', 'Apartamento', 'CC', 10055678, 'Calle 60 #12-34, Bogotá', 'Santiago.Apartamento@gmail.com', '+57 3105566778', 2800000, TRUE, 5, 1, 2);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Angel', 'Vader', 'CC', 10066789, 'Av. Suba #105-60, Bogotá', 'Angel.Vader@gmail.com', '+57 3106677889', 3000000, TRUE, 6, 1, 3);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Christian', 'Duque', 'CC', 10077890, 'Cra 30 #90-12, Bogotá', 'Christian.Duque@gmail.com', '+57 3107788990', 2600000, TRUE, 7, 1, 1);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Diana', 'Admin', 'CC', 10088901, 'Calle 80 #110-45, Bogotá', 'diana.Admin@gmail.com', '+57 3108899001', 2700000, TRUE, 1, 1, 2);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Elber', 'Galarga', 'CC', 10099012, 'Av. Boyacá #20-20, Bogotá', 'Elber.Galarga@gmail.com', '+57 3109900112', 2900000, TRUE, 2, 1, 3);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Armando', 'Bronca', 'CC', 10100123, 'Cra 24 #70-60, Bogotá', 'Armando.Bronca@gmail.com', '+57 3110011223', 2500000, TRUE, 3, 1, 1);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Elba', 'Gina', 'CC', 10111234, 'Calle 100 #15-40, Bogotá', 'Elba.Gina@gmail.com', '+57 3111122334', 2950000, TRUE, 4, 1, 2);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Elvis', 'Nieto', 'CC', 10122345, 'Av. Américas #25-50, Bogotá', 'Elvis.Nieto@gmail.com', '+57 3112233445', 2800000, TRUE, 5, 1, 3);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Ricardo', 'Navarro', 'CC', 10133456, 'Cra 60 #10-60, Bogotá', 'ricardo.navarro@gmail.com', '+57 3113344556', 2650000, TRUE, 6, 1, 1);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Natalia', 'Ríos', 'CC', 10144567, 'Calle 72 #22-34, Bogotá', 'natalia.rios@gmail.com', '+57 3114455667', 3000000, TRUE, 7, 1, 2);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Mateo', 'Ortega', 'CC', 10155678, 'Av. 68 #40-80, Bogotá', 'mateo.ortega@gmail.com', '+57 3115566778', 2700000, TRUE, 1, 1, 3);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Juliana', 'Ramírez', 'CC', 10166789, 'Cra 13 #45-21, Bogotá', 'juliana.ramirez@gmail.com', '+57 3116677889', 3100000, TRUE, 2, 1, 1);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Simón', 'García', 'CC', 10177890, 'Calle 26 #74-30, Bogotá', 'simon.garcia@gmail.com', '+57 3117788990', 2800000, TRUE, 3, 1, 2);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Andrea', 'López', 'CC', 10123456, 'Cra 40 #10-33, Medellín', 'andrea.lopez@gmail.com', '+57 3011234567', 2800000, TRUE, 1, 2, 4);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Santiago', 'Ruiz', 'CC', 10234567, 'Calle 33 #55-66, Medellín', 'santiago.ruiz@gmail.com', '+57 3012345678', 3100000, TRUE, 2, 2, 5);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Marcela', 'Pérez', 'CC', 10345678, 'Av. El Poblado #25-60, Medellín', 'marcela.perez@gmail.com', '+57 3013456789', 2700000, TRUE, 3, 2, 6);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Jorge', 'Castro', 'CC', 10456789, 'Cra 65 #30-22, Medellín', 'jorge.castro@gmail.com', '+57 3014567890', 2900000, TRUE, 4, 2, 4);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Valentina', 'García', 'CC', 10567890, 'Calle 9 #43-78, Medellín', 'valentina.garcia@gmail.com', '+57 3015678901', 3000000, TRUE, 5, 2, 5);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Daniel', 'Martínez', 'CC', 10678901, 'Av. 80 #45-90, Medellín', 'daniel.martinez@gmail.com', '+57 3016789012', 2500000, TRUE, 6, 2, 6);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Carolina', 'Ramírez', 'CC', 10789012, 'Cra 48 #21-45, Medellín', 'carolina.ramirez@gmail.com', '+57 3017890123', 2300000, TRUE, 7, 2, 5);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Camilo', 'Mejía', 'CC', 10890123, 'Calle 34 #78-12, Medellín', 'camilo.mejia@gmail.com', '+57 3018901234', 3100000, TRUE, 2, 2, 4);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Isabela', 'Moreno', 'CC', 10901234, 'Cra 45 #12-50, Medellín', 'isabela.moreno@gmail.com', '+57 3019012345', 2600000, TRUE, 1, 2, 6);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Esteban', 'Rojas', 'CC', 11012345, 'Av. San Juan #45-67, Medellín', 'esteban.rojas@gmail.com', '+57 3020123456', 2950000, TRUE, 3, 2, 5);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Lucía', 'Fernández', 'CC', 11123456, 'Cra 30 #45-10, Medellín', 'lucia.fernandez@gmail.com', '+57 3021234567', 2800000, TRUE, 4, 2, 6);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Tomás', 'Vélez', 'CC', 11234567, 'Calle 80 #65-30, Medellín', 'tomas.velez@gmail.com', '+57 3022345678', 3200000, TRUE, 5, 2, 5);
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID)
+VALUES ('Manuela', 'Zapata', 'CC', 11345678, 'Cra 70 #50-20, Medellín', 'manuela.zapata@gmail.com', '+57 3023456789', 2700000, TRUE, 6, 2, 4);
+
+
+INSERT INTO EMPLEADO (NOMBRE, APELLIDO, TIPO_DOCUMENTO, N_DOCUMENTO, DIRECCION, EMAIL, TELEFONO, SALARIO_BASE, ACTIVO, CARGO_ID, SUCURSAL_ID, AREA_ID) VALUES
+('Sofía', 'Alvarez', 'CC', 20111234, 'Calle 5 #22-30, Cali', 'sofia.alvarez@gmail.com', '+57 3201122334', 2750000, TRUE, 1, 3, 7),
+('Andrés', 'Valencia', 'CC', 20122345, 'Cra 25 #33-40, Cali', 'andres.valencia@gmail.com', '+57 3202233445', 2600000, TRUE, 2, 3, 8),
+('Marta', 'Gómez', 'CC', 20133456, 'Av. 6N #20-25, Cali', 'marta.gomez@gmail.com', '+57 3203344556', 2900000, TRUE, 3, 3, 9),
+('Luis', 'Herrera', 'CC', 20144567, 'Calle 18 #14-55, Cali', 'luis.herrera@gmail.com', '+57 3204455667', 3000000, TRUE, 4, 3, 7),
+('Carolina', 'Mendoza', 'CC', 20155678, 'Cra 10 #7-23, Cali', 'carolina.mendoza@gmail.com', '+57 3205566778', 2700000, TRUE, 5, 3, 8),
+('Daniel', 'Castillo', 'CC', 20166789, 'Av. Roosevelt #33-12, Cali', 'daniel.castillo@gmail.com', '+57 3206677889', 2500000, TRUE, 6, 3, 9),
+('Natalia', 'Sánchez', 'CC', 20177890, 'Calle 12 #40-20, Cali', 'natali.sanchez@gmail.com', '+57 3207788990', 2800000, TRUE, 7, 3, 7),
+('Jorge', 'Ramírez', 'CC', 20188901, 'Cra 5 #18-30, Cali', 'jorge.ramirez@gmail.com', '+57 3208899001', 2650000, TRUE, 1, 3, 8),
+('Paula', 'Jiménez', 'CC', 20199012, 'Av. 3N #10-11, Cali', 'paula.jimenez@gmail.com', '+57 3209900112', 2950000, TRUE, 2, 3, 9),
+('Carlos', 'Vargas', 'CC', 20200123, 'Calle 16 #25-44, Cali', 'carlos.vargas@gmail.com', '+57 3210011223', 2700000, TRUE, 3, 3, 7),
+('Lucía', 'Moreno', 'CC', 20211234, 'Cra 7 #13-50, Cali', 'lucia.moreno@gmail.com', '+57 3211122334', 3000000, TRUE, 4, 3, 8),
+('Andrés', 'Torres', 'CC', 20222345, 'Av. 9N #20-15, Cali', 'andres.torres@gmail.com', '+57 3212233445', 2650000, TRUE, 5, 3, 9),
+('María', 'Ríos', 'CC', 20233456, 'Calle 22 #40-22, Cali', 'maria.rios@gmail.com', '+57 3213344556', 2800000, TRUE, 6, 3, 7),
+('Pedro', 'García', 'CC', 20244567, 'Cra 10 #5-30, Cali', 'pedro.garcia@gmail.com', '+57 3214455667', 2750000, TRUE, 7, 3, 8),
+('Ana', 'Ortiz', 'CC', 20255678, 'Av. Roosevelt #35-40, Cali', 'ana.ortiz@gmail.com', '+57 3215566778', 2900000, TRUE, 1, 3, 9),
+('Miguel', 'Díaz', 'CC', 20266789, 'Calle 5 #30-10, Cali', 'miguel.diaz@gmail.com', '+57 3216677889', 2600000, TRUE, 2, 3, 7),
+('Laura', 'Pérez', 'CC', 20277890, 'Cra 13 #40-55, Cali', 'laura.perez@gmail.com', '+57 3217788990', 3000000, TRUE, 3, 3, 8);
+
+
+-- NOMINAS:
+INSERT INTO NOMINA (EMPLEADO_ID, PERIODO_ANUAL, PERIODO_MES) VALUES
+(1, 2024, 1),
+(2, 2024, 3),
+(3, 2024, 5),
+(4, 2024, 7),
+(5, 2024, 9),
+(6, 2025, 2),
+(7, 2025, 4),
+(8, 2025, 6),
+(9, 2025, 8),
+(10, 2025, 10),
+(11, 2023, 1),
+(12, 2023, 3),
+(13, 2023, 5),
+(14, 2023, 7),
+(15, 2023, 9),
+(16, 2024, 2),
+(17, 2024, 4),
+(18, 2024, 6),
+(19, 2024, 8),
+(20, 2024, 10),
+(21, 2025, 1),
+(22, 2025, 3),
+(23, 2025, 5),
+(24, 2025, 7),
+(25, 2025, 9),
+(26, 2023, 2),
+(27, 2023, 4),
+(28, 2023, 6),
+(29, 2023, 8),
+(30, 2023, 10);
+INSERT INTO NOMINA (EMPLEADO_ID, PERIODO_ANUAL, PERIODO_MES) VALUES
+(31, 2024, 11),
+(32, 2024, 12),
+(33, 2025, 1),
+(34, 2025, 2),
+(35, 2025, 3),
+(36, 2025, 4),
+(37, 2025, 5),
+(38, 2025, 6),
+(39, 2025, 7),
+(40, 2025, 8),
+(41, 2025, 9),
+(42, 2025, 10),
+(43, 2025, 11),
+(44, 2025, 12),
+(45, 2023, 1),
+(46, 2023, 2),
+(47, 2023, 3),
+(48, 2023, 4),
+(49, 2023, 5),
+(50, 2023, 6);
+
+-- NOVEDADES:
+INSERT INTO NOVEDADES (FECHA, DESCRIPCION, JUSTIFICACION, NOMINA_ID) VALUES 
+('2025-01-10', 'Bonificación por desempeño', TRUE, 1),
+('2025-03-15', 'Día de descanso compensado', TRUE, 2),
+('2025-05-05', 'Descuento por tardanza', FALSE, 3),
+('2025-07-18', 'Horas extra nocturnas', TRUE, 4),
+('2025-09-22', 'Incapacidad médica', TRUE, 5),
+('2025-02-07', 'Deducción por adelanto de salario', FALSE, 6),
+('2025-04-25', 'Bonificación por productividad', TRUE, 7),
+('2025-06-13', 'Falta injustificada', FALSE, 8),
+('2025-08-30', 'Compensación por trabajo remoto', TRUE, 9),
+('2025-10-14', 'Sanción por incumplimiento de normas', FALSE, 10),
+('2023-01-20', 'Horas extra en fin de semana', TRUE, 11),
+('2023-03-05', 'Bono por fidelidad en la empresa', TRUE, 12),
+('2023-05-29', 'Deducción por uso indebido de recursos', FALSE, 13),
+('2023-07-03', 'Premio al mejor empleado del mes', TRUE, 14),
+('2023-09-21', 'Reembolso por gastos de viaje', TRUE, 15),
+('2024-02-16', 'Sanción por comportamiento inapropiado', FALSE, 16),
+('2024-04-04', 'Subsidio de transporte especial', TRUE, 17),
+('2024-06-11', 'Descuento por ausencia injustificada', FALSE, 18),
+('2024-08-07', 'Bonificación especial por aniversario', TRUE, 19),
+('2024-10-19', 'Incentivo por cumplimiento de objetivos', TRUE, 20);
+ 
+-- CONCEPTO:
+
+INSERT INTO CONCEPTO (NOMINA_ID, TIPO, DESCRIPCION, FECHA, MONTO) VALUES
+(1, 'DEVENGADO', 'Bonificación por desempeño', '2025-01-10', 250000),
+(2, 'DEDUCCION', 'Día de descanso compensado', '2025-03-15', -50000),
+(3, 'DEDUCCION', 'Descuento por tardanza', '2025-05-05', -50000),
+(4, 'DEVENGADO', 'Horas extra nocturnas', '2025-07-18', 180000),
+(5, 'DEVENGADO', 'Incapacidad médica', '2025-09-22', 150000),
+(6, 'DEDUCCION', 'Deducción por adelanto de salario', '2025-02-07', -120000),
+(7, 'DEVENGADO', 'Bonificación por productividad', '2025-04-25', 300000),
+(8, 'DEDUCCION', 'Falta injustificada', '2025-06-13', -80000),
+(9, 'DEVENGADO', 'Compensación por trabajo remoto', '2025-08-30', 220000),
+(10, 'DEDUCCION', 'Sanción por incumplimiento de normas', '2025-10-14', -100000),
+(11, 'DEVENGADO', 'Horas extra en fin de semana', '2023-01-20', 250000),
+(12, 'DEVENGADO', 'Bono por fidelidad en la empresa', '2023-03-05', 190000),
+(13, 'DEDUCCION', 'Deducción por uso indebido de recursos', '2023-05-29', -70000),
+(14, 'DEVENGADO', 'Premio al mejor empleado del mes', '2023-07-03', 260000),
+(15, 'DEVENGADO', 'Reembolso por gastos de viaje', '2023-09-21', 150000),
+(16, 'DEDUCCION', 'Sanción por comportamiento inapropiado', '2024-02-16', -45000),
+(17, 'DEVENGADO', 'Subsidio de transporte especial', '2024-04-04', 120000),
+(18, 'DEDUCCION', 'Descuento por ausencia injustificada', '2024-06-11', -50000),
+(19, 'DEVENGADO', 'Bonificación especial por aniversario', '2024-08-07', 175000),
+(20, 'DEVENGADO', 'Incentivo por cumplimiento de objetivos', '2024-10-19', 250000);
+
+ 
